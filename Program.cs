@@ -2,22 +2,23 @@
 //Console.WriteLine("Hello, World!");
 
 
-// Ejercicio 2
 
-namespace Cookinglasagna 
-{ 
+//Ejercicio 2
+
+namespace Cookinglasagna
+{
     public class Lasagna
     {
         static void Main(string[] args)
         {
-            
-       
-        var lasagna = new Lasagna();
-        Console.WriteLine(lasagna.ExpectedMinutesInOven());
-        Console.WriteLine(lasagna.ElapsedTimeInMinutes(3,20));
+
+
+            var lasagna = new Lasagna();
+            Console.WriteLine(lasagna.ExpectedMinutesInOven());
+            Console.WriteLine(lasagna.ElapsedTimeInMinutes(3, 20));
 
         }
-        
+
         public int ExpectedMinutesInOven()
         {
             return 40;
