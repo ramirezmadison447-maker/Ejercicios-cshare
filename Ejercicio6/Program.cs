@@ -3,10 +3,6 @@ using System.Linq;
 
 public class BirdCount
 {
-    public static void Main(string[] args)
-    {
-
-    }
     private readonly int[] _birdsPerDay;
 
     public BirdCount(int[] birdsPerDay)
@@ -21,26 +17,46 @@ public class BirdCount
 
     public int Today()
     {
-        return _birdsPerDay[^1];
+        return _birdsPerDay[_birdsPerDay.Length - 1];
     }
 
     public void IncrementTodaysCount()
     {
-        _birdsPerDay[^1]++;
+        _birdsPerDay[_birdsPerDay.Length - 1]++;
     }
 
     public bool HasDayWithoutBirds()
     {
-        return _birdsPerDay.Contains(0);
+        foreach (int count in _birdsPerDay)
+        {
+            if (count == 0)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public int CountForFirstDays(int numberOfDays)
     {
-        return _birdsPerDay.Take(numberOfDays).Sum();
+        int total = 0;
+        for (int i = 0; i < numberOfDays; i++)
+        {
+            total += _birdsPerDay[i];
+        }
+        return total;
     }
 
     public int BusyDays()
     {
-        return _birdsPerDay.Count(count => count >= 5);
+        int busy = 0;
+        foreach (int count in _birdsPerDay)
+        {
+            if (count >= 5)
+            {
+                busy++;
+            }
+        }
+        return busy;
     }
 }
