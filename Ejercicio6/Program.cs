@@ -3,6 +3,10 @@ using System.Linq;
 
 public class BirdCount
 {
+    public static void Main(string[] args)
+    {
+
+    }
     private readonly int[] _birdsPerDay;
 
     public BirdCount(int[] birdsPerDay)
