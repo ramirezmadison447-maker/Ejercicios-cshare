@@ -1,5 +1,3 @@
-﻿
-using System.Linq;
 
 public class BirdCount
 {
