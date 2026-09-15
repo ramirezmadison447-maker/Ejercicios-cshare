@@ -1,4 +1,4 @@
-﻿public class BirdCount
+public class BirdCount
 {
     private readonly int[] _birdsPerDay;
 
