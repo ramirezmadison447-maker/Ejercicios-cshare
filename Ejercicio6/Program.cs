@@ -62,7 +62,25 @@ public class BirdCount
     {
         var birdsPerDay = new[] { 2, 5, 0, 7, 4, 1 };
         var birdCount = new BirdCount(birdsPerDay);
+        
         Console.WriteLine(birdCount.HasDayWithoutBirds());
+        Console.WriteLine("====================");
+
+        foreach (int count in BirdCount.LastWeek())
+        {
+            Console.WriteLine(count);
+        }
+        Console.WriteLine("====================");
+        Console.WriteLine(birdCount.Today());
+        birdCount.IncrementTodaysCount();
+        Console.WriteLine("====================");
+        Console.WriteLine(birdCount.Today());
+        Console.WriteLine("====================");
+        Console.WriteLine(birdCount.HasDayWithoutBirds());
+        Console.WriteLine("=============================");
+        Console.WriteLine(birdCount.CountForFirstDays(4));
+
+
     }
 
 }
