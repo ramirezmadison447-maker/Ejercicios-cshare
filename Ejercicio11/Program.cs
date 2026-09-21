@@ -69,8 +69,8 @@ public class Ejecutable
 
         var warrior2 = new Warrior();
         var wizard3 = new Wizard();
-        Console.WriteLine(warrior2.DamagePoint(wizard3)); // Esto debe de arrojar: 10 Porque mi oponente en este caso Wizar todavia no tiene el hechizo preparado por lo tanto esta debil y el warrior es mas fuerte
+        Console.WriteLine(warrior2.DamagePoints(wizard3)); // Esto debe de arrojar: 10 Porque mi oponente en este caso Wizar todavia no tiene el hechizo preparado por lo tanto esta debil y el warrior es mas fuerte
         wizard3.PrepareSpell();
-        Console.WriteLine(warrior2.DamagePoint(wizard3)); // Ahora me da: 6, Porque el mago se tomo su pocion y es mas fuerte que el Warrior por lo tanto retorna 6.
+        Console.WriteLine(warrior2.DamagePoints(wizard3)); // Ahora me da: 6, Porque el mago se tomo su pocion y es mas fuerte que el Warrior por lo tanto retorna 6.
     }
 }
